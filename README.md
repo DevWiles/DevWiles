@@ -1,10 +1,14 @@
-## 邓维 Wiles
+# 邓维 Wiles
 
-AI 应用 / 解决方案工程师，广东工业大学自动化专业，2027 届。
+### AI 应用 / 解决方案工程师
+
+广东工业大学 · 自动化 · 2027 届
+<br>
+[Email](mailto:nathan.demon66@gmail.com) &nbsp;/&nbsp; [个人主页](https://devwiles.vercel.app/) &nbsp;/&nbsp; [myagent](https://github.com/DevWiles/myagent)
+
+> **Open to work** — AI 售前、解决方案、应用开发
 
 主要做 Agent 和 RAG 应用。Java、Python 都写，习惯先搭一个能跑的原型，再自建评测集，把准确率、延迟和成本量化成能横向比较的数字。日常写代码、测试和文档都离不开 AI 编程工具。
-
-目前在看 AI 售前、解决方案、应用开发方向的机会。联系：nathan.demon66@gmail.com
 
 ---
 
