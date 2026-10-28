@@ -1,89 +1,57 @@
-<h1 align="center">Hi, 我是邓维 (Wiles) 👋</h1>
+## 邓维 Wiles
 
-<p align="center">
-  <b>AI 应用 / 解决方案工程师</b> · 广东工业大学 自动化 2027 届<br>
-  专注 Agent 与 RAG 应用，从需求分析、方案选型、原型落地一路做到量化验收。
-</p>
+AI 应用 / 解决方案工程师，广东工业大学自动化专业，2027 届。
 
-<p align="center">
-  <a href="mailto:nathan.demon66@gmail.com"><img src="https://img.shields.io/badge/Email-nathan.demon66%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
-  <img src="https://img.shields.io/badge/Open%20to-AI%20售前%20%2F%20解决方案%20%2F%20应用开发-2ea44f?style=flat-square" alt="Open to work">
-</p>
+主要做 Agent 和 RAG 应用。Java、Python 都写，习惯先搭一个能跑的原型，再自建评测集，把准确率、延迟和成本量化成能横向比较的数字。日常写代码、测试和文档都离不开 AI 编程工具。
+
+目前在看 AI 售前、解决方案、应用开发方向的机会。联系：nathan.demon66@gmail.com
 
 ---
 
-### 🧭 关于我
+### 项目
 
-- 🧩 **能写代码，也能做方案**：Java / Python 都写，熟悉 RAG、Agent、MCP 这些主流 AI 应用架构，能很快搭出 PoC 给人验证。
-- 📏 **用数据说话**：每套方案都自建评测集，把「答得准不准、跑得快不快、花多少钱」变成可对比的数字。
-- 💸 **效果和成本一起算**：自研 Coding Agent 与 Claude Code 同模型对标，成功率基本持平，推理成本低约 75%。
-- 🤖 **重度 AI 工具用户**：原型、测试、文档日常都和 AI 编程工具一起完成。
+**[myagent](https://github.com/DevWiles/myagent)**：从零手写的命令行 Coding Agent
 
-### 🚀 代表项目
+参照 Claude Code 实现，能读写代码、执行命令、搜索代码库、操作浏览器。没有用任何 Agent 框架，ReAct 循环、工具调用、上下文管理和多 Agent 编排都是自己写的。
 
-#### [myagent](https://github.com/DevWiles/myagent) — 从零手写的命令行 Coding Agent
-
-参照 Claude Code 做的终端编程智能体，能读写代码、执行命令、搜索代码库、操作浏览器。**不依赖任何 Agent 框架**，ReAct 循环、工具调用、上下文管理、多 Agent 编排全部自己实现。
-`Java 17` `OkHttp` `Function Calling` `MCP` `WebSocket` `JUnit 5` `OpenTUI / SolidJS`
+Java 17 · OkHttp · Function Calling · MCP · WebSocket · JUnit 5 · OpenTUI / SolidJS
 
 | 指标 | 结果 |
 | --- | --- |
-| 66 题沙盒评测，与同模型 Claude Code 对比 | 成功率 **92.4%** vs 95.5%，单题输入 token **21.8k vs 87.4k**（约 1/4） |
-| 真实仓库基准 AsynCodeBench · cachetools | **215 / 215** 测试、5 / 5 依赖契约全部通过 |
-| 「规划 → 并行施工 → 验收」多 Agent 流水线 | 复杂任务成功率 68.8% → **81.2%** |
-| 三档分级上下文压缩 | token −73%，连续 6 次压缩后目标保持率 **100%** |
-| MCP 工具清单按需加载 | 单次请求开销 7.3k → 4.7k（−35%） |
-| 检查点回退 | 影子 git 仓库按轮次快照，`/rewind` 一条命令撤回文件或对话 |
-| 质量保障 | Docker 隔离沙盒 + 隐藏测试评测框架；全程 TDD，**1500+** 自动化测试 |
+| 66 题沙盒评测，与同模型 Claude Code 对比 | 成功率 92.4% vs 95.5%，单题输入 token 21.8k vs 87.4k |
+| 真实仓库基准 AsynCodeBench · cachetools | 215 / 215 测试、5 / 5 依赖契约通过 |
+| 规划、并行施工、验收的多 Agent 流水线 | 复杂任务成功率 68.8% → 81.2% |
+| 三档分级上下文压缩 | token 减少 73%，连续 6 次压缩后目标保持率 100% |
+| MCP 工具清单按需加载 | 单次请求开销 7.3k → 4.7k |
+| 检查点回退 | 影子 git 仓库按轮次快照，`/rewind` 撤回文件或对话 |
+| 测试 | Docker 隔离沙盒 + 隐藏测试评测框架，TDD，1500+ 自动化测试 |
 
-#### 智能项目管理平台 · 后端（2025.11 – 2026.05）
+**智能项目管理平台 · 后端**（2025.11 – 2026.05）
 
-项目创建、任务分配、角色权限、审批流程配置的微服务平台。
-`Spring Cloud` `Flowable` `RocketMQ` `Seata` `Redis` `MySQL` `Nacos`
+项目创建、任务分配、角色权限、审批流配置的微服务平台。
 
-- RocketMQ 异步化任务指派与审批通知，接口 p50 209 ms → **100 ms**
-- 自定义 `@DistributedLock` + AOP 幂等，50 并发重复提交从 8 行重复 / 42 次报错降到 **1 行 / 0 报错**；Seata AT 保证跨库一致
-- GitHub Actions + Docker Compose 自动化部署，原子换入、可回滚，部署中位 **5.4 分钟**，14 容器一键拉起
+Spring Cloud · Flowable · RocketMQ · Seata · Redis · MySQL · Nacos
 
-### 🛠️ 技术栈
+- 任务指派和审批通知改为 RocketMQ 异步，接口 p50 从 209 ms 降到 100 ms
+- 自定义 `@DistributedLock` + AOP 做幂等，50 并发重复提交从 8 行重复、42 次报错降到 1 行、0 报错；跨库一致性用 Seata AT
+- GitHub Actions + Docker Compose 部署，原子换入、可回滚，部署中位耗时 5.4 分钟，14 个容器一键拉起
 
-**AI 应用**
-![RAG](https://img.shields.io/badge/RAG-混合检索%20%7C%20RRF%20%7C%20Rerank-6f42c1?style=flat-square)
-![Agent](https://img.shields.io/badge/Agent-ReAct%20%7C%20Function%20Calling%20%7C%20MCP-6f42c1?style=flat-square)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
-![Milvus](https://img.shields.io/badge/Milvus%20%2F%20Chroma-00A1EA?style=flat-square&logo=milvus&logoColor=white)
-
-**语言与后端**
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-6DB33F?style=flat-square&logo=spring&logoColor=white)
-![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
-![RocketMQ](https://img.shields.io/badge/RocketMQ-D77310?style=flat-square&logo=apacherocketmq&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![Elasticsearch](https://img.shields.io/badge/Elasticsearch-005571?style=flat-square&logo=elasticsearch&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-
-**部署交付**
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![Docker](https://img.shields.io/badge/Docker%20Compose-2496ED?style=flat-square&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-
-### 📦 其他开源
+### 其他仓库
 
 | 仓库 | 简介 |
 | --- | --- |
-| [wechat-mp-archiver](https://github.com/DevWiles/wechat-mp-archiver) | 把微信公众号全部历史文章批量保存成 Markdown 笔记（Java） |
-| [LingChat](https://github.com/DevWiles/LingChat) · [lingchat-web](https://github.com/DevWiles/lingchat-web) | 灵雀轻聊：Spring Cloud + Netty + Kafka 的微服务即时通讯系统，React 前端 |
-| [MyNote](https://github.com/DevWiles/MyNote) | 记录日常、计划 Todo、AI 总结每日内容 |
-| [base-of-wiles](https://github.com/DevWiles/base-of-wiles) | Wiles 的个人基地 |
+| [wechat-mp-archiver](https://github.com/DevWiles/wechat-mp-archiver) | 把公众号历史文章批量存成 Markdown（Java） |
+| [LingChat](https://github.com/DevWiles/LingChat) · [lingchat-web](https://github.com/DevWiles/lingchat-web) | 即时通讯系统，Spring Cloud + Netty + Kafka，React 前端 |
+| [MyNote](https://github.com/DevWiles/MyNote) | 日常记录、Todo，AI 总结每日内容 |
+| [base-of-wiles](https://github.com/DevWiles/base-of-wiles) | 个人主页 |
 
-### 🎓 教育
+### 技术栈
 
-**广东工业大学** · 自动化（本科）· 2023.09 – 2027.06
-院级优秀工作者、校级奖学金 · 参与发表深度学习领域论文、专利若干
+- AI 应用：RAG（混合检索、RRF、Rerank）、Agent（ReAct、Function Calling、MCP）、LangChain、PyTorch、Milvus / Chroma
+- 后端：Java、Python、Spring Cloud、Kafka、RocketMQ、Redis、Elasticsearch、MySQL
+- 部署：Linux、Docker Compose、GitHub Actions、Git
 
----
+### 教育
 
-<p align="center"><i>Keep learning.</i></p>
+广东工业大学 · 自动化本科 · 2023.09 – 2027.06
+院级优秀工作者、校级奖学金，参与发表深度学习方向论文和专利若干
