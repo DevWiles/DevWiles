@@ -1,10 +1,11 @@
-# 邓维 Wiles
+<h1 align="center">你好，我是 Wiles</h1>
 
-### AI 应用 / 解决方案工程师
+<h3 align="center">AI 应用 / 解决方案工程师</h3>
 
-广东工业大学 · 自动化 · 2027 届
-<br>
-[Email](mailto:nathan.demon66@gmail.com) &nbsp;/&nbsp; [个人主页](https://devwiles.vercel.app/) &nbsp;/&nbsp; [myagent](https://github.com/DevWiles/myagent)
+<p align="center">
+  广东工业大学 · 自动化 · 2027 届<br>
+  <a href="mailto:nathan.demon66@gmail.com">Email</a> &nbsp;/&nbsp; <a href="https://devwiles.vercel.app/">个人主页</a> &nbsp;/&nbsp; <a href="https://github.com/DevWiles/myagent">myagent</a>
+</p>
 
 > **Open to work** — AI 售前、解决方案、应用开发
 
